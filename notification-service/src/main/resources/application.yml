@@ -1,0 +1,78 @@
+server:
+  port: 8081
+
+spring:
+#RabbitMQ
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#smtp gmail connection
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: juan.aranda.galvis@gmail.com
+    password: ybvznbvbrvfqgopg
+#other mail properties
+    smtp:
+      properties.mail.smtp:
+        auth: true
+        connectiontimeout: 5000
+        timeout: 5000
+        writetimeout: 5000
+        starttls.enable: true
+
+---
+server:
+  port: 8081
+
+spring:
+  profiles: test
+#RabbitMQ
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#smtp gmail connection
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: juan.aranda.galvis@gmail.com
+    password: ybvznbvbrvfqgopg
+#other mail properties
+    smtp:
+      properties.mail.smtp:
+        auth: true
+        connectiontimeout: 5000
+        timeout: 5000
+        writetimeout: 5000
+        starttls.enable: true
+
+---
+server:
+  port: 8082
+
+spring:
+  profiles: prod
+#RabbitMQ
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#smtp gmail connection
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: juan.aranda.galvis@gmail.com
+    password: ybvznbvbrvfqgopg
+#other mail properties
+    smtp:
+      properties.mail.smtp:
+        auth: true
+        connectiontimeout: 5000
+        timeout: 5000
+        writetimeout: 5000
+        starttls.enable: true
